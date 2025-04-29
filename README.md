@@ -19,6 +19,24 @@ This project currently extracts fund performance data from a few well-known Tanz
 >
 > By adjusting wait conditions or selector paths, you can quickly repurpose this project for any fund data source that presents its information in an HTML table format.
 
+```
+FundFetch_and_Insight_Tanzania/
+├── README.md
+├── requirements.txt
+├── fund_fetcher/
+│   ├── __init__.py
+│   ├── fetch_zansec.py
+│   ├── fetch_sanlaam.py
+│   ├── fetch_utt.py
+│   └── fetch_nav.py
+├── data/
+│   ├── table_from_zansec.csv
+│   ├── table_from_sanlaam.csv
+│   ├── table_from_utt.csv
+│   └── table_from_nav.csv
+├── main.py
+└── .gitignore
+```
 ## Use Case
 This project is ideal for:
 
