@@ -40,16 +40,16 @@ FundFetch_and_Insight_Tanzania/
 ## Use Case
 This project is ideal for:
 
-**Financial Analysts & Economists**
+1. **Financial Analysts & Economists**
 Professionals seeking up-to-date insights on Tanzania’s investment landscape can automate the retrieval of fund performance data from key platforms. This enables deeper analysis of trends, comparisons across fund managers, and data-driven decision-making without manual data collection.
 
-**Data Scientists & BI Developers**
+2. **Data Scientists & BI Developers**
 Those building dashboards or financial models for local markets can use this project as a clean data pipeline. It provides ready-to-use CSV datasets that can feed into tools like Power BI, Tableau, or Python-based analytics solutions for visualizing fund performance, ranking, and changes over time.
 
-**Organizations Needing Automated Reporting**
+3. **Organizations Needing Automated Reporting**
 Investment firms, research institutions, or consultancies who prepare recurring investment performance summaries can plug this scraper into their reporting systems. It removes the bottleneck of manual web scraping, reduces human error, and ensures timely data capture for scheduled reporting.
 
-**Educators & Students in Finance/Data**
+4. **Educators & Students in Finance/Data**
 Academic environments can use this project to demonstrate real-world applications of Python web scraping, financial data pipelines, or Tanzanian market research. It also provides a base for learning data transformation, reporting, and workflow automation.
 
 ## Technologies Used
@@ -67,12 +67,6 @@ The project generates high-quality CSV files, each representing structured inves
 ├── table_from_sanlaam.csv     # Data scraped from Sanlam Tanzania
 └── table_from_utt.csv         # Data scraped from UTT AMIS
 ```
-
-### Example Use Cases for Output:
-1. Direct integration into financial dashboards (e.g., Power BI, Tableau, Streamlit)
-2. Feeding into automated reporting workflows
-3. Enabling comparisons across fund managers and performance over time
-4. Archiving data snapshots for future reference or backtesting strategies
    
 ## How to Run
 
