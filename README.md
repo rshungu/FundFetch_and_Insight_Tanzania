@@ -1,12 +1,10 @@
 # FundFetch & Insights Tanzania - UTT AMIS Scheme Fund Tracker
 
-This project focuses on scraping and analyzing investment fund data from the **UTT AMIS website**, a key platform for tracking the performance of various investment schemes in Tanzania. 
-   - UTT AMIS provides valuable data on the performance of different investment funds, enabling investors to make informed decisions about where to allocate their resources. However, manually tracking these funds over time can be time-consuming and complex.
+FundFetch & Insight Tanzania is a tool designed to automate the scraping, cleaning, and analysis of investment fund data from the [UTT AMIS website](https://uttamis.co.tz/fund-performance) — a key platform for monitoring unit trust scheme performance in Tanzania.
 
-The goal of the **FundFetch & Insight Tanzania** tool is to automate the process of collecting, cleaning, and analyzing this data. 
+While UTT AMIS provides valuable insights, manually tracking fund data over time can be tedious and inefficient. This project streamlines that process by automatically collecting and processing daily fund performance data, enabling users to explore historical trends with ease.
 
-   - The tool will track the performance of scheme funds over a period spanning from **Dec 31st, 2024, to Dec 31st, 2019**, offering a historical perspective on the growth patterns of these funds. 
-   - It will also generate insightful visualizations to help users easily interpret fund trends and make better investment decisions.
+The tool covers fund performance from December 31st, 2019 to December 31st, 2024, and produces visual reports that help investors, analysts, and enthusiasts make informed financial decisions based on reliable and timely data.
 
 ## Key Features
 1. Automated Data Scraping: The tool fetches daily data from the UTT AMIS website, ensuring that the information is always up-to-date.
