@@ -1,56 +1,67 @@
-# FundFetch_and_Insight_Tanzania
+# FundFetch & Insights Tanzania - UTT AMIS Scheme Fund Tracker
 
-A Python-based data scraping project that collects and structures fund performance data from top Tanzanian investment platforms. It’s built to automate the retrieval of key financial tables for analysis, reporting, or integration into dashboards and financial tools.
+This project focuses on scraping and analyzing investment fund data from the **UTT AMIS website**, a key platform for tracking the performance of various investment schemes in Tanzania. 
+   - UTT AMIS provides valuable data on the performance of different investment funds, enabling investors to make informed decisions about where to allocate their resources. However, manually tracking these funds over time can be time-consuming and complex.
 
-## Notes on Platform Coverage and Adaptability
-This project currently extracts fund performance data from a few well-known Tanzania platforms such as:-
-- [Zan Securities](https://zansec.co.tz)
-- [Sanlam Tanzania](https://invest-tz.sanlameastafrica.com)
-- [UTT AMIS](https://uttamis.co.tz/fund-performance)
+The goal of the **FundFetch & Insight Tanzania** tool is to automate the process of collecting, cleaning, and analyzing this data. 
 
-> These were selected based on accessibilty and relevance, but the code can easily be adapted to other websites in Tanzania investment ecosystem or beyond. The scraping logic is modular and structured for extension.
->
-> Some websites may use JavaScript-based loading with dynamic placeholders such as loading spinners or skeletons. In such cases, selenium is used to wait for the page to fully render before scraping.
->
-> When working with the new site, consider the following
->   - Inspecting elements (right click - Inspect) to understand the structures and classes
->   - Viewing page source to understand if the content is dynamic or static
->   - Making minimal changes to the class names or selectors in the code depending on how the site's data is structured
->
-> By adjusting wait conditions or selector paths, you can quickly repurpose this project for any fund data source that presents its information in an HTML table format.
+   - The tool will track the performance of scheme funds over a period spanning from **Dec 31st, 2024, to Dec 31st, 2019 years ago**, offering a historical perspective on the growth patterns of these funds. 
+   - It will also generate insightful visualizations to help users easily interpret fund trends and make better investment decisions.
 
+## Key Features
+1. Automated Data Scraping: The tool fetches daily data from the UTT AMIS website, ensuring that the information is always up-to-date.
+  
+2. Data Cleaning: It automatically cleans the scraped data to eliminate inconsistencies and make it ready for analysis.
+  
+3. Performance Tracking: It tracks the performance of various scheme funds, providing a clear view of how each fund has changed over time.
+   
+4. Reporting & Visualizations: The tool generates reports with visualizations, such as line charts and bar charts, to highlight trends and insights into the performance of the funds.
+
+> This tool streamlines the process for investors, analysts, and financial professionals by allowing them to easily track and compare the performance of various investment funds over time. It automates the generation of reports, saving time and ensuring consistency in data analysis.
+> 
+> Additionally, the tool is valuable for data enthusiasts who are interested in exploring financial data sets, gaining insights into fund performance trends, and creating data visualizations to better understand the dynamics of investment schemes.
+
+## Repo Structure
 ```
 FundFetch_and_Insight_Tanzania/
-├── README.md
-├── requirements.txt
-├── fund_fetcher/
-│   ├── __init__.py
-│   ├── fetch_zansec.py
-│   ├── fetch_sanlaam.py
-│   ├── fetch_utt.py
-│   └── fetch_nav.py
-├── data/
-│   ├── table_from_zansec.csv
-│   ├── table_from_sanlaam.csv
-│   ├── table_from_utt.csv
-│   └── table_from_nav.csv
-├── main.py
-└── .gitignore
+│
+├── README.md                       # Project documentation
+├── requirements.txt                # List of Python dependencies
+├── fund_fetcher/                   # Folder containing the core functionality for fetching and processing data
+│   ├── __init__.py                 # Marks the folder as a Python package
+│   ├── fetch_utt.py                # Script for scraping data from the UTT AMIS website
+│
+├── data/                           # Directory for storing raw and cleaned data
+│   ├── raw_data.csv                # Raw data fetched from UTT AMIS
+│   └── cleaned_data.csv            # Cleaned and processed data ready for analysis
+│
+├── scripts/                        # Folder containing all scripts for different processes
+│   ├── scrape_uttamis.py           # Web scraping script for fetching fund data
+│   ├── clean_data.py               # Data cleaning and transformation script
+│   ├── generate_reports.py         # Script to generate reports and visualizations
+│   └── config.py                   # Configuration file (e.g., for scraping parameters)
+│
+├── outputs/                        # Directory for storing generated reports and visualizations
+│   ├── daily_report.pdf            # Generated daily report with fund performance summary
+│   ├── fund_performance_plot.png   # Visualization of fund performance over time
+│
+├── notebooks/ (Optional)           # Folder for Jupyter notebooks (for exploration and analysis)
+│   ├── data_exploration.ipynb      # Jupyter notebook for interactive data exploration and analysis
+│
+├── main.py                         # Main script that runs the whole tool: fetches, cleans, and generates reports
+├── .gitignore                      # Specifies files/folders to be ignored by Git
+└── README.md                       # Project documentation (detailed above)
+
 ```
-## Use Case
-This project is ideal for:
-
-1. **Financial Analysts & Economists**
-Professionals seeking up-to-date insights on Tanzania’s investment landscape can automate the retrieval of fund performance data from key platforms. This enables deeper analysis of trends, comparisons across fund managers, and data-driven decision-making without manual data collection.
-
-2. **Data Scientists & BI Developers**
-Those building dashboards or financial models for local markets can use this project as a clean data pipeline. It provides ready-to-use CSV datasets that can feed into tools like Power BI, Tableau, or Python-based analytics solutions for visualizing fund performance, ranking, and changes over time.
-
-3. **Organizations Needing Automated Reporting**
-Investment firms, research institutions, or consultancies who prepare recurring investment performance summaries can plug this scraper into their reporting systems. It removes the bottleneck of manual web scraping, reduces human error, and ensures timely data capture for scheduled reporting.
-
-4. **Educators & Students in Finance/Data**
-Academic environments can use this project to demonstrate real-world applications of Python web scraping, financial data pipelines, or Tanzanian market research. It also provides a base for learning data transformation, reporting, and workflow automation.
+> The scraping logic is modular, allowing for extension to other data sources with similar structures. Some websites may use JavaScript-based loading with dynamic content, such as loading spinners or skeleton screens. In such cases, Selenium can be used to ensure that the page is fully rendered before scraping.
+> 
+> When adapting this project to other sites, consider the following:
+>
+> 1. Inspecting elements (right-click - Inspect) to understand the structure and classes of the data.
+> 2. Viewing the page source to check if the content is dynamic (loaded by JavaScript) or static.
+> 3. Making necessary adjustments to class names or selectors in the code based on how the site's data is structured.
+>
+> By adjusting wait conditions or modifying selector paths, this project can be repurposed for any fund data source that presents its information in an HTML table format.
 
 ## Technologies Used
 - `Python`
@@ -59,21 +70,11 @@ Academic environments can use this project to demonstrate real-world application
 - `webdriver-manager` - Automatically handles ChromeDriver installation and management, making the Selenium setup smoother and more portable across environments.
 - `pandas` - Powers the transformation and export of scraped HTML tables into clean, structured datasets. Enables CSV export, quick inspection, and future integration into data pipelines or visualizations
 
-## Output
-The project generates high-quality CSV files, each representing structured investment fund data from different platforms. These files are stored locally and named for easy reference
-
-```
-├── table_from_zansec.csv      # Data scraped from Zan Securities
-├── table_from_sanlaam.csv     # Data scraped from Sanlam Tanzania
-└── table_from_utt.csv         # Data scraped from UTT AMIS
-```
-   
 ## How to Run
-
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/FundFetch_and_Insight_Tanzania.git
-    cd FundFetch_and_Insight_Tanzania
+    git clone https://github.com/your-username/FundFetch-and-Insight-Tanzania.git
+    cd FundFetch-and-Insight-Tanzania
     ```
 
 2. Install dependencies:
@@ -83,14 +84,20 @@ The project generates high-quality CSV files, each representing structured inves
 
 3. Run the script:
     ```bash
-    python fund_fetch.py
+    python scripts/scrape_uttamis.py
     ```
 
-> Note: Ensure you have Chrome installed for Selenium to work properly with `webdriver-manager`.
+4. Clean the fetch data
+   ```bash
+    python scripts/clean_data.py
+    ```
+5. Generate reports and visualizations
+   ```bash
+    python scripts/generate_reports.py
+    ```
+## Example output
+After running the generate_reports.py scripts, you will get:
+   - daily_report.pdf containing the summary of fund performance
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## Contact
-Feel free to connect on [LinkedIn](https://www.linkedin.com/in/rehema-shungu/) or fork and explore the repo.
+## Contributions
+Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to create a pull request or open an issue.
