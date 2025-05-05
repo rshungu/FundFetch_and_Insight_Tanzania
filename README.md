@@ -5,7 +5,7 @@ This project focuses on scraping and analyzing investment fund data from the **U
 
 The goal of the **FundFetch & Insight Tanzania** tool is to automate the process of collecting, cleaning, and analyzing this data. 
 
-   - The tool will track the performance of scheme funds over a period spanning from **Dec 31st, 2024, to Dec 31st, 2019 years ago**, offering a historical perspective on the growth patterns of these funds. 
+   - The tool will track the performance of scheme funds over a period spanning from **Dec 31st, 2024, to Dec 31st, 2019**, offering a historical perspective on the growth patterns of these funds. 
    - It will also generate insightful visualizations to help users easily interpret fund trends and make better investment decisions.
 
 ## Key Features
