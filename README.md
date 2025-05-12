@@ -1,5 +1,12 @@
 # UTT AMIS Scheme Fund Tracker - FundFetch & Insights Tanzania 
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-Active-brightgreen.svg)]()
+[![SQL](https://img.shields.io/badge/SQL-PostgreSQL-blue)]()
+[![ETL](https://img.shields.io/badge/ETL-Pipelines-yellow)]()
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)]()
+[![PowerBI](https://img.shields.io/badge/Visualizations-PowerBI-yellow)]()
+
  UTT AMIS Scheme Fund Tracker is a tool designed to automate the scraping, cleaning, and analysis of investment fund data from the [UTT AMIS website](https://uttamis.co.tz/fund-performance) — a key platform for monitoring unit trust scheme performance in Tanzania.
 
 While UTT AMIS provides valuable insights, manually tracking fund data over time can be tedious and inefficient. This project streamlines that process by automatically collecting and processing daily fund performance data, enabling users to explore historical trends with ease.
