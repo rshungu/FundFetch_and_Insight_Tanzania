@@ -1,0 +1,42 @@
+# Ignore Python cache and virtual environment files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.env
+venv/
+env/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore output reports and large data
+outputs/
+*.pdf
+*.png
+*.jpg
+
+# Ignore raw scraped data if not meant to be public
+data/utt_fund_data_max.csv
+data/utt_fund_data_cleaned_table.csv
+
+# Ignore secrets and configs (if you store .env or credentials)
+secrets/
+*.env
+
+# Ignore database dumps or SQLite files (if used)
+*.db
+*.sqlite
+
+# Ignore logs or temporary files
+*.log
+*.tmp
+
+# macOS and Windows OS clutter
+.DS_Store
+Thumbs.db
+
+# VSCode or PyCharm IDE settings
+.vscode/
+.idea/
