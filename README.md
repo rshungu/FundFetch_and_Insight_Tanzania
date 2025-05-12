@@ -4,7 +4,7 @@
 
 While UTT AMIS provides valuable insights, manually tracking fund data over time can be tedious and inefficient. This project streamlines that process by automatically collecting and processing daily fund performance data, enabling users to explore historical trends with ease.
 
-The tool covers fund performance from December 31st, 2019 to December 31st, 2024, and produces visual reports that help investors, analysts, and enthusiasts make informed financial decisions based on reliable and timely data.
+The tool covers fund performance from December 31st, 2021 to December 31st, 2024, and produces visual reports that help investors, analysts, and enthusiasts make informed financial decisions based on reliable and timely data.
 
 ## Key Features
 1. Automated Data Scraping: The tool fetches daily data from the UTT AMIS website, ensuring that the information is always up-to-date.
@@ -21,34 +21,34 @@ The tool covers fund performance from December 31st, 2019 to December 31st, 2024
 
 ## Repo Structure
 ```
-FundFetch_and_Insight_Tanzania/
+UTT AMIS Fund Tracker/
 │
 ├── README.md                       # Project documentation
-├── requirements.txt                # List of Python dependencies
-├── fund_fetcher/                   # Folder containing the core functionality for fetching and processing data
-│   ├── __init__.py                 # Marks the folder as a Python package
-│   ├── fetch_utt.py                # Script for scraping data from the UTT AMIS website
+├── requirements.txt                # Python dependencies
+├── fund_fetcher/                   # Core functions for data scraping and processing
+│   ├── __init__.py                 # Marks it as a package
+│   ├── fetch_utt.py                # Main scraper for UTT AMIS
 │
-├── data/                           # Directory for storing raw and cleaned data
-│   ├── raw_data.csv                # Raw data fetched from UTT AMIS
-│   └── cleaned_data.csv            # Cleaned and processed data ready for analysis
+├── data/                           # Stores both raw and cleaned data
+│   ├── raw_data.csv                # Raw HTML table data
+│   └── cleaned_data.csv            # Processed dataset ready for analysis
 │
-├── scripts/                        # Folder containing all scripts for different processes
-│   ├── scrape_uttamis.py           # Web scraping script for fetching fund data
-│   ├── clean_data.py               # Data cleaning and transformation script
-│   ├── generate_reports.py         # Script to generate reports and visualizations
-│   └── config.py                   # Configuration file (e.g., for scraping parameters)
+├── scripts/                        # Utility scripts
+│   ├── scrape_uttamis.py           # Web scraping logic
+│   ├── clean_data.py               # Data cleaning script
+│   ├── generate_reports.py         # Creates visual summaries and reports
+│   └── config.py                   # Configuration settings
 │
-├── outputs/                        # Directory for storing generated reports and visualizations
-│   ├── daily_report.pdf            # Generated daily report with fund performance summary
-│   ├── fund_performance_plot.png   # Visualization of fund performance over time
+├── outputs/                        # Reports and plots output folder
+│   ├── daily_report.pdf            # Summary of fund performance
+│   ├── fund_performance_plot.png   # Line/bar plots of fund trends
 │
-├── notebooks/ (Optional)           # Folder for Jupyter notebooks (for exploration and analysis)
-│   ├── data_exploration.ipynb      # Jupyter notebook for interactive data exploration and analysis
+├── notebooks/ (optional)          # Jupyter notebooks for exploration
+│   ├── data_exploration.ipynb      # Interactive data exploration
 │
-├── main.py                         # Main script that runs the whole tool: fetches, cleans, and generates reports
-├── .gitignore                      # Specifies files/folders to be ignored by Git
-└── README.md                       # Project documentation (detailed above)
+├── main.py                         # Main automation runner script
+├── .gitignore                      # Files to be excluded from Git
+└── README.md                       # Project description (this file)
 
 ```
 > The scraping logic is modular, allowing for extension to other data sources with similar structures. Some websites may use JavaScript-based loading with dynamic content, such as loading spinners or skeleton screens. In such cases, Selenium can be used to ensure that the page is fully rendered before scraping.
