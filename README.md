@@ -50,9 +50,6 @@ UTT AMIS Fund Tracker/
 │   ├── daily_report.pdf            # Summary of fund performance
 │   ├── fund_performance_plot.png   # Line/bar plots of fund trends
 │
-├── notebooks/ (optional)          # Jupyter notebooks for exploration
-│   ├── data_exploration.ipynb      # Interactive data exploration
-│
 ├── main.py                         # Main automation runner script
 ├── .gitignore                      # Files to be excluded from Git
 └── README.md                       # Project description (this file)
